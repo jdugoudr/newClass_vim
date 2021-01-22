@@ -16,11 +16,11 @@ That's it.
 
 Start by creating your .hpp file (please use hpp extention).
 
-In your empty file just press <F4>. It create the base structure of a canonincal class.
+In your empty file just press F4. It create the base structure of a canonincal class.
 
 Now you can add your variables and functions members.
 
-When you think you have all prototype you'll need, create .cpp file and press <F4>. The script create the base structure of a canonical class implementation and read your .hpp to add every functions you have.
+When you think you have all prototype you'll need, create .cpp file and press F4. The script create the base structure of a canonical class implementation and read your .hpp to add every functions you have.
 
 
 You juste have to implement them now !
@@ -31,7 +31,7 @@ Please note that the class name will be base on the file name.
 
 Test.hpp will create a class called Test.
 
-Test.class.hpp will create a class called Test also. (this will be manage later).
+Test.class.hpp will create a class called Test.class (this will be manage later).
 
 hpp and cpp files HAVE to be the same name.
 
