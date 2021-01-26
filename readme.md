@@ -12,7 +12,7 @@ Then restart vim if a session was already open.
 
 That's it.
 
-# A it work
+# How it work
 
 Start by creating your .hpp file (please use hpp extention).
 
