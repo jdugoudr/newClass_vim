@@ -104,7 +104,8 @@ function s:Create_Functions()
 		execute "0r ~/.vim/templates/skelton.hpp"
 		execute "Stdheader"
 		call s:find_replace('CLASS', s:className)
-		let	l:tmp = toupper(expand('%t'))
+		let l:tmp = s:className.'_'.expand('%:e')
+		let	l:tmp = toupper(l:tmp)
 		call s:find_replace('DINCLUSION', substitute(l:tmp, "[.]", "_", ""))
 	elseif l:ext == "cpp"
 		execute "0r ~/.vim/templates/skelton.cpp"
