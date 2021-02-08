@@ -22,8 +22,8 @@ function s:skip_to_function(list)
 	return a:list
 endfunction
 
-function s:break_header_in_list()
-	let l:list = readfile(s:className.".hpp")
+function s:break_header_in_list(headerName)
+	let l:list = readfile(a:headerName)
 	if len(l:list) == 1
 		echo "I think you use a Mac"
 		let l:list = split (l:list[0], '<CR>')
@@ -77,11 +77,14 @@ function s:format_each_line(list)
 endfunction
 
 function s:find_header_file()
-	if (filereadable(s:className.".hpp"))
-		let l:list = s:break_header_in_list()
+	let l:hfile = expand('%:p')
+	let l:hfile = substitute(expand('%:p'), ".cpp", ".hpp", "")
+	echo l:hfile
+	if (filereadable(l:hfile))
+		let l:list = s:break_header_in_list(l:hfile)
 		call s:format_each_line(l:list)
 	else
-		echo "is not readable"
+		echo l:hfile . " is not readable"
 	endif
 endfunction
 
